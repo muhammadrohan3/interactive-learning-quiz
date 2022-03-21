@@ -12,7 +12,8 @@ const User = require('../../models/User');
 // @route  POST api/users
 // @desc   Register user
 // @access Public
-router.post('/', [
+router.post('/', 
+[
     check('name', 'Name is required!')
         .not()
         .isEmpty(),
@@ -37,7 +38,9 @@ async (req, res) => {
         let user = await User.findOne({ email });
 
         if(user) {
-           return res.status(400).json({ errors: [{msg: 'User already exists!'}] });
+           return res
+            .status(400)
+            .json({ errors: [{msg: 'User already exists!'}] });
         }
 
         //Get user's gravatar
