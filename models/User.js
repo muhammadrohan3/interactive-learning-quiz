@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const UserSchema = new mongoose.Schema({
     name: {
         type: String,
-        required: TextTrackCue
+        required: true
     },
     email: {
         type: String,
