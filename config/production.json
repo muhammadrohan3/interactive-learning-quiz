@@ -1,0 +1,6 @@
+{
+    "mongoURI": "mongodb+srv://cristiana:parola@interactivelearning.1asf4.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
+    "jwtSecret": "mysecrettoken",
+    "githubClientId": "00f9fbbe24881d30636f",
+    "githubSecret": "02edc5e5904b362e5b3596936219b7fc00bd9237" 
+}
