@@ -13,6 +13,9 @@ import AddEducation from './components/profile-forms/AddEducation';
 import Profiles from './components/profiles/Profiles';
 import Profile from './components/profile/Profile';
 import Posts from './components/posts/Posts';
+import Quiz from './components/quiz/Quiz'
+import QuizPage from './components/quiz/QuizPage';
+import AddQuiz from './components/quiz/AddQuiz'
 import PrivateRoute from './components/routing/PrivateRoute';
 import { LOGOUT } from './actions/types';
 //Redux
@@ -107,6 +110,29 @@ const App = () => {
                   </PrivateRoute>
                 }
               />
+              <Route
+                path='/take-quiz'
+                element={
+                  <PrivateRoute>
+                    <Quiz/>
+                    </PrivateRoute>
+                }
+              />
+              <Route
+                path='/quiz-page/:type'
+                element={
+                  <PrivateRoute>
+                    <QuizPage/>
+                    </PrivateRoute>
+                }
+              /><Route
+              path='/add-quiz'
+              element={
+                <PrivateRoute>
+                  <AddQuiz/>
+                  </PrivateRoute>
+              }
+            />
             </Routes>
           </section>
         </Fragment>
